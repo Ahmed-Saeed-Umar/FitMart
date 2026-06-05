@@ -673,11 +673,11 @@ function NavbarWithGithub({ navOpaque, menuOpen, setMenuOpen, ghStats, ghLoading
             onClick={() => { if (!authLoading) navigate(user ? "/home" : "/auth"); }}
             disabled={authLoading}
             className={`text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-full transition-colors
-                           min-h-9 active:scale-[0.97] ${authLoading ? 'opacity-60 pointer-events-none' : ''}
+                           min-h-9 active:scale-[0.97] cursor-pointer ${authLoading ? 'opacity-60 pointer-events-none' : ''}
                            ${isOpaque
                 ? "bg-stone-900 text-white hover:bg-stone-700"
                 : "bg-white text-stone-900 hover:bg-stone-100"
-              }`}
+              }` }
           >
             {authLoading ? '...' : 'Get Started'}
           </button>
